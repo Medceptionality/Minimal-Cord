@@ -1,0 +1,100 @@
+@import url("https://aushevahmad.github.io/awesome-css/modules/bartender.css");
+:root {
+    --bartender-width: 4ch;  /* Width for displayed icon. Adjust depending on your needs [Default: 4ch] */
+}
+.containerDefault_ae2ea4:hover + .container__342a0, .container__342a0:hover {
+    max-height: 1000px; /* Make the threads Slide down */
+    transition: max-height 1s ease; }
+  
+  .container__342a0 {
+    max-height: 0; /* Initially hide the threads by setting their max-height to 0 */
+    overflow: hidden; 
+    transition: max-height 0.25s ease; }
+    @import url("https://minidiscordthemes.github.io/Snippets/AltTextImprovements/main.css");
+    .buttons_ce5b56 {
+        margin: 6px 6px 6px auto !important;
+        margin-left: auto;
+        max-width: calc(40px * 6); /* CHANGE HERE: 6 columns when expanded */
+        min-width: calc(40px * 2); /* CHANGE HERE: 2 columns when collapsed */
+        width: min-content;
+        display: flex;
+        gap: 6px 0;
+        flex-wrap: wrap-reverse;
+        flex-grow: 1;
+        height: fit-content;
+        justify-content: right;
+    }
+    .buttons_ce5b56 .buttonContainer__8b164,
+    .buttons_ce5b56 > .button_afdfd9 {
+        width: 40px;
+    }
+    .separator__8424b {
+        margin: 0;
+        justify-content: center;
+        width: 40px;
+    }
+    .separator__8424b::before {
+        display: none;
+    }
+    .separator__8424b .innerButton_debeee {
+    
+        margin: 0;
+    }
+    .textArea__74543 {
+        width: fit-content;
+        flex-grow: 1.01;
+    }
+    [class*=" guilds__"] {
+        width: 10px;
+        transition: width 0.2s ease 0.1s, opacity 0.2s ease 0.1s;
+        opacity: 0;
+    }
+    
+    [class*=" guilds__"]:hover {
+        width: 65px;
+        opacity: 1;
+    }
+    [class^="sidebar_"] [class^="panels_"] {
+        margin-right: 5px;
+        margin-bottom: 5px;
+        margin-left: 5px;
+        border: 1px solid var(--background-modifier-accent);
+        border-radius: 20px;
+        box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.45);
+      }
+      
+      [class^="sidebar_"] [class^="panels_"] [class^="container_"],
+      [class^="sidebar_"] [class^="panels_"] [class^="panel_"] {
+        background: transparent !important;
+      }
+      
+      [class^="sidebar_"] [class^="panels_"] [class^="container_"] [class^="avatarWrapper_"] + [class^="flex_"] {
+        margin-left: -10px;
+      }
+      
+      #vc-spotify-player {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+      }
+      
+      /* Nitro Theme Shit */
+      html.custom-theme-background [class^="sidebar_"] {
+          background: var(--bg-overlay-3);
+      }
+      html.custom-theme-background [class^="sidebar_"] [class^="panels_"] {
+          background: var(--bg-overlay-1);
+      }
+      [class^=accountProfilePopoutWrapper] {
+        left: 0
+        }
+        [class^=accountProfilePopoutWrapper] [class*=userPopout] {
+        margin: 0;
+        width: fit-content
+        }
+        [class^=accountProfilePopoutWrapper] .section-28YDOf,
+        .userPopoutInner-nv9Y92:has(#account) > *:not(:has(#account)),
+        .userPopoutOverlayBackground-3A0Pcz:has(#account) > *:not(#account) {
+        display: none;
+        }
+        @import url("https://dablulite.github.io/css-snippets/BetterStatusPicker/import.css");
+        @import url(//dablulite.github.io/css-snippets/SuperUserArea/import.css);
