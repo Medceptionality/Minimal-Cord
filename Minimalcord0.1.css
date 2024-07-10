@@ -24,77 +24,67 @@
         height: fit-content;
         justify-content: right;
     }
-    .buttons_ce5b56 .buttonContainer__8b164,
-    .buttons_ce5b56 > .button_afdfd9 {
-        width: 40px;
-    }
-    .separator__8424b {
-        margin: 0;
-        justify-content: center;
-        width: 40px;
-    }
-    .separator__8424b::before {
-        display: none;
-    }
-    .separator__8424b .innerButton_debeee {
-    
-        margin: 0;
-    }
-    .textArea__74543 {
-        width: fit-content;
-        flex-grow: 1.01;
-    }
-    [class*=" guilds__"] {
-        width: 10px;
-        transition: width 0.2s ease 0.1s, opacity 0.2s ease 0.1s;
-        opacity: 0;
-    }
-    
-    [class*=" guilds__"]:hover {
-        width: 65px;
-        opacity: 1;
-    }
-    [class^="sidebar_"] [class^="panels_"] {
-        margin-right: 5px;
-        margin-bottom: 5px;
-        margin-left: 5px;
-        border: 1px solid var(--background-modifier-accent);
-        border-radius: 20px;
-        box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.45);
-      }
-      
-      [class^="sidebar_"] [class^="panels_"] [class^="container_"],
-      [class^="sidebar_"] [class^="panels_"] [class^="panel_"] {
-        background: transparent !important;
-      }
-      
-      [class^="sidebar_"] [class^="panels_"] [class^="container_"] [class^="avatarWrapper_"] + [class^="flex_"] {
-        margin-left: -10px;
-      }
-      
-      #vc-spotify-player {
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-      }
-      
-      /* Nitro Theme Shit */
-      html.custom-theme-background [class^="sidebar_"] {
-          background: var(--bg-overlay-3);
-      }
-      html.custom-theme-background [class^="sidebar_"] [class^="panels_"] {
-          background: var(--bg-overlay-1);
-      }
-      [class^=accountProfilePopoutWrapper] {
-        left: 0
-        }
-        [class^=accountProfilePopoutWrapper] [class*=userPopout] {
-        margin: 0;
-        width: fit-content
-        }
-        [class^=accountProfilePopoutWrapper] .section-28YDOf,
-        .userPopoutInner-nv9Y92:has(#account) > *:not(:has(#account)),
-        .userPopoutOverlayBackground-3A0Pcz:has(#account) > *:not(#account) {
-        display: none;
-        }
         @import url("https://dablulite.github.io/css-snippets/BetterStatusPicker/import.css");
-        @import url(//dablulite.github.io/css-snippets/SuperUserArea/import.css);
+        /* Add danger colours to dangerous user actions */
+#user-context-close-dm, #user-context-remove-friend, #user-context-block { color: var(--status-danger) }
+#user-context-close-dm:active, #user-context-remove-friend:active, #user-context-block:active {
+    background-color: var(--red-500)!important;
+    color: var(--white-500)!important;    
+}
+#user-context-close-dm[class*="focused_"], #user-context-remove-friend[class*="focused_"], #user-context-block[class*="focused_"] {
+    background-color: var(--button-danger-background);
+    color: var(--white-500);   
+}
+@import url("https://minidiscordthemes.github.io/FluentStatusIcons/FluentStatusIcons.theme.css");
+@import url(https://seele1306.github.io/Snippets/GuildBoost/import.css);
+:root {
+    --test-color: hsl(244, 67%, 43%);
+    --guildboost-accent-color: 88deg 74% 52%;
+    --guildboost-transparency: 25%;
+}
+@import url(//dablulite.github.io/css-snippets/ServersList/import.css);
+.buttons-uaqb-5>.button-ejjZWC:first-child,
+.link-39sEB3[href="/store"],
+[class*="badgeContainer-"]:has([class*="bogoTrialBadge-"]),
+[class*="giftCodeContainer-"]:first-child,
+[aria-label="Customize your own profile theme, banner, animated avatar, and more with Nitro!"],
+.containerWithMargin-1CVXAM {
+  display: none;
+}
+.panels-3wFtMD .container-YkUktl .flex-2S1XBF {
+    width: fit-content !important; 
+  }
+  
+  .panels-3wFtMD .container-YkUktl .avatarWrapper-1B9FTW {
+    width: 194px;
+    margin-right: 0px !important;
+  }
+  
+  .panels-3wFtMD .container-YkUktl .avatarWrapper-1B9FTW:hover {
+    margin-right: 8px !important;
+  }
+  
+  .panels-3wFtMD .container-YkUktl .flex-2S1XBF button[role="switch"] {
+    width: 0px;
+    overflow: hidden;
+    transition: all 0.3s;
+    left: 16px;
+  }
+  
+  .panels-3wFtMD .container-YkUktl .flex-2S1XBF:hover button[role="switch"] {
+    width: 32px;
+    overflow: visible;
+    transition: all 0.3s;
+    left: 0px;
+  }
+  
+  .panels-3wFtMD .container-YkUktl .flex-2S1XBF:not(:hover) button:not([role="switch"]) svg {
+    rotate: 360deg;
+    transition: rotate 0.3s;
+    background-color: var(--background-secondary-alt); /* might look off with some themes */
+  }
+  
+  .panels-3wFtMD .container-YkUktl .flex-2S1XBF:hover button:not([role="switch"]) svg {
+    rotate: 0deg;
+    transition: rotate 0.3s;
+  }
