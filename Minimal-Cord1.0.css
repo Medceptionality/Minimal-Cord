@@ -1,0 +1,72 @@
+  /* Hide sticker/gif/gift button */
+  button[aria-label="Open sticker picker"] {
+    display: none;
+}
+button[aria-label="Open GIF picker"] {
+    display: none;
+}
+button[aria-label="Send a gift"] {
+    display: none;
+} 
+/* Hide Message Timestamps unless you hover over a message Config */
+[class*="timestampInline_"],
+[class*="timezone-message-item"],
+[class*="latin24CompactTimeStamp_"] {
+    visibility: hidden; /* opacity: 0; <--- change to this if you like fadein/out anim*/
+    /* transition: opacity 0.25s ease; */ /* remove the "/" and "*" from both ends to add the anim*/
+}
+[class*="cozy"]:hover [class*="timestamp_f9f2ca"] {
+    visibility: visible; /* opacity: 1; <--- change to this if you like fadein/out anim*/
+}
+/* hide chatbox if no permission to talk in channel */
+[class*=channelTextAreaDisabled] {
+    display: none!important;
+}
+
+/* or if it doesn't work like because of themes: */
+[class*=channelTextAreaDisabled] {
+  opacity: 0!important;
+  position: absolute!important;
+  height: 0px!important;
+  width: 0px!important;
+  z-index: 0!important;
+}
+/**** Compress GitHub Bot's star and fork messages ****/
+[class^="grid_"]:has(> :last-child:nth-child(2)) {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.1rem 1rem 0.6rem 0.75rem;
+  }
+  
+  /* add padding between username and link */
+  [class^="grid_"]:has(> :last-child:nth-child(2)) [class^="embedTitle_"],
+  [class^="grid_"]:has(> :last-child:nth-child(2)) [class^="embedDescription_"] {
+    padding-left: 12px;
+  }
+  
+  /* Hide the extra GitHub bot avatars */
+  [class^="messageListItem_"]:has([class^="botText_"]):has([class^="grid_"] > :last-child:nth-child(2)) [class^="contents_"] {
+    display:none;
+  }
+  /* Reduce padding between selected bot messages */
+  [class^="messageListItem_"]:has([class^="botText_"]):has([class^="grid_"] > :last-child:nth-child(2)) [class*="groupStart_"] {
+    margin-top: -12px;
+  }
+  .container__62863:has([class^="grid_"] > :last-child:nth-child(2)) {
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    top: 12px;
+  }
+  
+  /* I do some weird offseting, it just looks better to not have a misaligned hover overlay */
+  .message_ccca67:has([class^="grid_"]):hover {
+    background-color: #00000000 !important;
+    background: #00000000 !important; /* Why do you do this, Discord Nitro themes.. */
+  }
+  
+  /* Align small bot messages with large ones */
+  /* Alternately, you could remove their background color or just live with mismatched lengths */
+  [class^="gridContainer_"], [class^="embedWrapper_"] {
+    min-width: 525px;
+  }
+  
